@@ -18,6 +18,19 @@
 
   <script>
     // Write your code here
+    function changeColor(color) {
+      return function() {
+        document.body.style.background = color;
+      }
+    }
+
+    const bgColor1 = changeColor("#A2CA71");
+    const bgColor2 = changeColor("#F6E96B");
+    const bgColor3 = changeColor("#7C00FE");
+
+    document.querySelector("#blue").addEventListener('click', () => bgColor1);
+    document.querySelector("#pink").addEventListener('click', () => bgColor2);
+    document.querySelector("#green").addEventListener('click', () => bgColor3);
 
   </script>
 </body>
